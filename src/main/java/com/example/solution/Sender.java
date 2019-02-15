@@ -17,8 +17,16 @@ public class Sender {
 
     public static void main(String[] args) {
         Sender sender = new Sender();
+
         sender.initProperties(args[0]);
         String text = sender.createTextMessage(args[1]);
+
+//        Для запуска через IDE
+
+//        sender.initProperties("src/main/resources/config.properties");
+//        String text = sender.createTextMessage("src/main/resources/message.txt");
+
+
         String subject = sender.getProperties().getProperty("mail.subject");
         String to = sender.getProperties().getProperty("mail.to");
         String from = sender.getProperties().getProperty("mail.from");

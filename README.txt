@@ -7,3 +7,6 @@
         -args[0] - Path config.properties
         -args[1] - Path message.txt
 
+        Для запуска через console:
+        mvn compile
+        mvn exec:java -Dexec.args="<config.properties path> <message.txt path>"
